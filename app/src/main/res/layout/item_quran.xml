@@ -19,7 +19,7 @@
         android:id="@+id/num_suras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="14dp"
         tools:text="1"
         android:textColor="@color/white"

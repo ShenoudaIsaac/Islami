@@ -17,7 +17,7 @@ return ViewHolder(binding)
 
     override fun onBindViewHolder(holder: QuranAdapter.ViewHolder, position: Int) {
         val quranData=quransData[position]
-        holder.binding.numSuras.text=quranData.surasSorting.toString()
+        holder.binding.numSuras.text=" ${quranData.surasSorting +1  }"
         holder.binding.surasNameAr.text=quranData.arSurasName
         holder.binding.surasNameEn.text=quranData.enSurasName
         holder.binding.numVerses.text=quranData.numOfVerses

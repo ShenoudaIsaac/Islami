@@ -16,7 +16,6 @@ import com.shnsh.islami.fragments.QuranFragment
 import com.shnsh.islami.fragments.RadioFragment
 import com.shnsh.islami.fragments.SebhaFragment
 
-@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
    lateinit var binding_:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {

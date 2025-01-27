@@ -1,5 +1,6 @@
 package com.shnsh.islami.fragments
 
+import AppConstants
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import com.shnsh.islami.databinding.FragmentQuranBinding
 import com.shnsh.islami.models.QuranData
 
 class QuranFragment : Fragment() {
+    lateinit var  adapter:QuranAdapter
     lateinit var binding:FragmentQuranBinding
      private var quransData= mutableListOf<QuranData>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,23 +23,19 @@ class QuranFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
          binding=FragmentQuranBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        createQuranList()
-        val adapter=QuranAdapter(quransData)
+        adapter=QuranAdapter(quranList)
         binding.quranRecycle.adapter=adapter
 
     }
+    val quranList=AppConstants.getQuranData()
 
-    private fun createQuranList() {
-        for (i in 1..100)
-        quransData.add(QuranData(i,"الفاتحة","alfatiha","30"))
-    }
+
 
 
 }

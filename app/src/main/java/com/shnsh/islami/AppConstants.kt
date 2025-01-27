@@ -1,4 +1,6 @@
-class AppConstants {
+import com.shnsh.islami.models.QuranData
+
+object AppConstants {
     val arabicAuranSuras=listOf(
 
     "الفاتحه",
@@ -347,4 +349,10 @@ class AppConstants {
         "5",
         "6"
     )
+    fun getQuranData():MutableList<QuranData>{
+        val quranDataList= mutableListOf<QuranData>()
+        for ( i in 0..113)
+        quranDataList.add(QuranData(i, arabicAuranSuras[i], englishQuranSurahs[i], AyaNumber[i]))
+        return quranDataList
+    }
 }
