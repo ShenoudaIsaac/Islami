@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/black"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/quran_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sura_frame"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/num_suras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        tools:text="1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/suras_name_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="AL-Fatiha"
+        app:layout_constraintStart_toEndOf="@id/quran_frame"
+        app:layout_constraintTop_toTopOf="@id/quran_frame"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/num_verses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="7 Verses"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/suras_name_en"
+        app:layout_constraintStart_toStartOf="@id/suras_name_en"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/suras_name_ar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="الفاتحه"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="14dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:src="@color/white"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/num_verses"
+        android:layout_marginBottom="-24dp"/>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
