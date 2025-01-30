@@ -1,4 +1,4 @@
-import com.shnsh.islami.models.QuranData
+package com.shnsh.islami.models
 
 object AppConstants {
     val arabicAuranSuras=listOf(

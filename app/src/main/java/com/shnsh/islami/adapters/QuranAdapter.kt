@@ -1,9 +1,7 @@
-package com.shnsh.islami
+package com.shnsh.islami.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.shnsh.islami.databinding.ItemQuranBinding
 import com.shnsh.islami.models.QuranData
@@ -15,17 +13,24 @@ class QuranAdapter(var quransData: MutableList< QuranData>):RecyclerView.Adapter
 return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: QuranAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val quranData=quransData[position]
-        holder.binding.numSuras.text=" ${quranData.surasSorting +1  }"
-        holder.binding.surasNameAr.text=quranData.arSurasName
-        holder.binding.surasNameEn.text=quranData.enSurasName
-        holder.binding.numVerses.text=quranData.numOfVerses
-
+        holder.numSuras.text=" ${quranData.surasSorting +1  }"
+        holder.surasNameAr.text=quranData.arSurasName
+        holder.surasNameEn.text=quranData.enSurasName
+        holder.versesNum.text=quranData.numOfVerses
+        onItemClickListener?.let{
+            holder.binding.root.setOnClickListener {
+                onItemClickListener?.onItemClicked(quranData, position)
+            }
+        }
     }
 
     override fun getItemCount(): Int =quransData.size
-
+    var onItemClickListener: OnItemClickListener?=null
+fun interface OnItemClickListener{
+    fun onItemClicked(quransData: QuranData,position: Int)
+}
 
 
 
