@@ -6,8 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.shnsh.islami.R
+import com.shnsh.islami.databinding.FragmentSebhaBinding
 
 class SebhaFragment : Fragment() {
+    lateinit var binding:FragmentSebhaBinding
+
+    var counterr=0
    
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +23,17 @@ class SebhaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sebha, container, false)
+        binding=FragmentSebhaBinding.inflate(layoutInflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.counter.text="0"
+        binding.counter.setOnClickListener {
+            counterr++
+            binding.counter.text=counterr.toString()
+        }
     }
 
 }

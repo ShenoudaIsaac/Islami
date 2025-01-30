@@ -3,12 +3,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sebha"
     tools:context=".fragments.SebhaFragment">
+    <ImageView
+        android:id="@+id/islami_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/islami_logo"
+        android:layout_marginStart="60dp"
+        />
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="240dp"
+        android:src="@drawable/sebhabody_1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sebhabody_2"
+        android:layout_marginTop="166dp"
+        android:layout_marginStart="180dp"/>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="سبحان الله"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="365dp"/>
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="20"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:layout_marginTop="430dp"
+        android:layout_marginStart="175dp"
+        />
+
+
 
 </FrameLayout>
