@@ -14,13 +14,16 @@
         />
 
     <ImageView
+        android:id="@+id/sebha_body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="240dp"
-        android:src="@drawable/sebhabody_1" />
+        android:src="@drawable/sebhabody_1"
+        />
 
     <ImageView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/sebhabody_2"
@@ -28,9 +31,10 @@
         android:layout_marginStart="180dp"/>
 
     <TextView
+        android:id="@+id/zekr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="سبحان الله"
+        tools:text="سبحان الله"
         android:textColor="@color/white"
         android:textSize="50sp"
         android:layout_marginStart="95dp"
